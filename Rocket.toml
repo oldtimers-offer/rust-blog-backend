@@ -1,0 +1,6 @@
+[default.databases]
+postgres_db = { url = "postgres://postgres:123456789@localhost/rust_blog" }
+
+
+[release.databases]
+postgres_db = { url = "postgres://postgres:123456789@localhost/rust_blog" }

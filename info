@@ -1,0 +1,11 @@
+curl -X POST http://127.0.0.1:8000/register -H "Content-Type: application/json" -d '{"username": "mica", "password": "tixi", "is_author": true}'
+
+curl -X POST http://127.0.0.1:8000/posts -H "Content-Type: application/json" -d '{"title": "Title", "body": "body, body, body", "author_id":0}'
+
+curl -X GET http://127.0.0.1:8000/posts
+
+curl -X POST http://127.0.0.1:8000/posts -H "Content-Type: application/json" -d '{"title": "Title2", "body": "body, body, body", "author_id":0}' -H 'X-Username: mica'
+
+curl -X POST http://127.0.0.1:8000/posts -H "Content-Type: application/json" -d '{"title": "Title3", "body": "body, body, body"}' -H 'X-Username: mica' -H 'X-Password: tixi'
+
+
